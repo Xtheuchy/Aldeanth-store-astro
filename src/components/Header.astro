@@ -1,0 +1,76 @@
+---
+
+---
+
+<header>
+    <div class="Logo">
+        <h1>ALDEANTH</h1>
+    </div>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#"><i class="fa-solid fa-star" style="font-size: 28px"></i> Inicio</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Sobre nosotros</a></li>
+            <li class="desplegable">
+                <a href="#"><i class="fas fa-box"></i> Productos</a>
+                <ul class="desplegable-menu">
+                    <li><a href=""><i class="fa-solid fa-ice-cream"></i> Helados</a></li>
+                    <li><a href=""><i class="fa-solid fa-wine-glass-empty"></i> Bebidas</a></li>
+                    <li><a href=""><i class="fa-solid fa-utensils"></i> Comida</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-tag"></i> Ofertas</a></li>
+            <li><a href="#"><i class="fas fa-envelope"></i> Contactanos</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+        </ul>
+    </nav>
+</header>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chewy&family=Oswald:wght@200..700&display=swap');
+    .Logo{
+        text-align: center;
+        font-family: "chewy";
+        font-weight: 400;
+        font-style: normal;
+        font-size: 50px;
+        background-color: rgba(165, 235, 60, 0.932);
+    }
+    .navbar{
+        background-color: #fcb79a;
+        padding:  15px 25px 15px 25px;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+        font-size: 25px;
+    }
+    .desplegable{
+        position: relative;
+        z-index: 1;
+    }
+    .desplegable-menu {
+        display: none;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .desplegable-menu li a{
+        transition: 0.5s;
+    }
+    .desplegable-menu li a:hover{
+        background-color: aliceblue;
+        padding: 0 20px ;
+    }
+    .desplegable:hover{
+    }
+    .desplegable:hover .desplegable-menu {
+        background-color: #fcb79a;
+        font-size: 21px;
+        width: 135px;
+        text-align: center;
+        display: block;
+        position: absolute;
+        z-index: 2;
+        padding: 10px 0 10px 0;
+        border-radius: 10px 10px;
+    }
+</style>

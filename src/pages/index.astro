@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="ALDEANTH">
+	<main>
+		<section class="fondo">
+			<div class="mensaje">
+				<h1>¡Dale un gusto a tu día!</h1>
+				<br />
+				<p>
+					Descubre nuestros deliciosos helados y disfruta de sabores
+					únicos, frescos y naturales.
+				</p>
+			</div>
+			<div class="button">
+				<a href="#"><button>¡Encuentra tu sabor favorito</button></a>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.fondo {
+		width: 100%;
+		height: 600px;
+		background-size: cover;
+		background-size: cover;
+		background-position: center;
+		background-image: url(assets/Fondo.webp);
+	}
+	.mensaje {
+		padding: 0 30px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: flex-end;
+		width: 40%;
+		height: 250px;
+	}
+	.mensaje h1 {
+		font-size: 48px;
+	}
+	.mensaje p {
+		font-size: 20px;
+		text-align: left;
+		font-family: "Courier New", Courier, monospace;
+	}
+	.button {
+		margin-top: 40px;
+		width: 40%;
+		height: auto;
+		display: flex;
+		justify-content: center;
+	}
+	.button a button {
+		height: 50px;
+		padding: 0 20px;
+		font-size: 18px;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		border-radius: 10px;
+		border: none;
+		background-color: rgb(255, 196, 0);
+	}
+	button:hover {
+		background-color: #ff8c00;
+		border-color: #ff6347;
+		box-shadow: 0 4px 30px rgba(255, 99, 71, 0.6);
+		transform: scale(1.05);
+	}
+	button:active {
+		transform: scale(0.95);
+		background-color: #ff4500;
+		box-shadow: 0 0 15px rgba(255, 38, 0, 0.8);
+	}
+</style>
