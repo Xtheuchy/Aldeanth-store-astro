@@ -1,4 +1,6 @@
 ---
+import CardTestimonio from "../components/CardTestimonio.astro";
+import ProductCards from "../components/ProductCards.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -15,6 +17,37 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 			<div class="button">
 				<a href="#"><button>¡Encuentra tu sabor favorito</button></a>
+			</div>
+		</section>
+		<section class="container-content">
+			<h1>
+				<i class="fa-regular fa-star"></i> Nuestros productos destacados
+			</h1>
+			<div class="content">
+				<ProductCards />
+				<ProductCards />
+				<ProductCards />
+				<ProductCards />
+			</div>
+		</section>
+		<section class="test_cliente">
+			<h1><i class="fa-solid fa-message"></i> Opiniones que Endulzan</h1>
+			<div class="content_test">
+				<CardTestimonio
+				image="https://cdn.pixabay.com/photo/2014/04/12/14/59/portrait-322470_640.jpg"
+				user="Carlos Gómez"
+				comentario="El helado tiene un toque único que no encuentras en ningún otro lado. Los sabores son auténticos, y el ambiente del lugar es súper acogedor. ¡100% recomendado!"
+			/>
+			<CardTestimonio
+				image="https://cdn.pixabay.com/photo/2015/03/03/08/55/portrait-657116_640.jpg"
+				user="Mariana Torres"
+				comentario="Me encanta lo natural que saben los helados aquí. Puedes sentir la frescura en cada cucharada. Además, el personal siempre es muy amable."
+			/>
+			<CardTestimonio
+				image="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_640.png"
+				user="Andrés Fernández"
+				comentario="Los helados son deliciosos y tienen opciones para todos los gustos. ¡Mi favorito es el de maracuyá! Definitivamente es mi lugar favorito para disfrutar un buen postre."
+			/>
 			</div>
 		</section>
 	</main>
@@ -73,5 +106,30 @@ import Layout from "../layouts/Layout.astro";
 		transform: scale(0.95);
 		background-color: #ff4500;
 		box-shadow: 0 0 15px rgba(255, 38, 0, 0.8);
+	}
+	.container-content h1 {
+		text-align: center;
+		font-size: 30px;
+		margin: 10px 0;
+	}
+	.content {
+		justify-content: center;
+		display: flex;
+		gap: 18px;
+	}
+	.test_cliente {
+		margin: 10px 0 0 0;
+		padding: 15px 0;
+		background-color: rgb(247, 247, 247);
+	}
+	.test_cliente h1{
+		text-align: center;
+		margin: 20px 0;
+		font-size: 30px;
+	}
+	.content_test{
+		display: flex;
+		justify-content: center;
+		gap: 20px;
 	}
 </style>
