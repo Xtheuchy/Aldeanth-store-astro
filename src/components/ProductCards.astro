@@ -13,7 +13,7 @@ const { titulo, descripcion, precio, imagen } = Astro.props;
         <h3>s/. 3.00</h3>
     </div>
     <div class="buttonAdd">
-        <a href="#"><button>Add cart</button></a>
+        <a href="#"><button>Agregar carrito</button></a>
     </div>
 </section>
 <style>
@@ -57,5 +57,45 @@ const { titulo, descripcion, precio, imagen } = Astro.props;
     .buttonAdd button:active{
         box-shadow: 0 0 10px #5b8aff;
         transform: scale(0.95);
+    }
+
+   /* Estilos para pantallas pequeñas (tabletas en modo retrato) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        section{
+            height: 230px;
+        }
+        .image{
+            height: 140px;
+        }
+        .title{
+            font-size: 15px;
+        }
+        .price{
+            font-size: 14px;
+        }
+        .buttonAdd button {
+        width: 100px;
+        height: 30px;
+        font-size: 14px;}
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 767px) {
+        section{
+            height: 180px;
+        }
+        .image{
+            height: 100px;
+        }
+        .title{
+            font-size: 12px;
+        }
+        .price{
+            font-size: 12px;
+        }
+        .buttonAdd button {
+        width: 60px;
+        height: 30px;
+        font-size: 8px;}
     }
 </style>

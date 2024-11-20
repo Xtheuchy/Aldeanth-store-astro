@@ -48,7 +48,8 @@
     </div>
 </footer>
 <style>
-    footer{
+    footer {
+        margin-top: 100px;
         padding: 20px 0;
         background-color: #3e3e3e;
     }
@@ -64,7 +65,7 @@
         border-radius: 50%;
         padding: 0 5px;
     }
-    .image_name h2{
+    .image_name h2 {
         color: rgb(238, 238, 238);
     }
     .descripcion_perfil {
@@ -86,38 +87,74 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         font-size: 20px;
     }
-    .list-pages ul a{
+    .list-pages ul a {
         color: rgb(238, 238, 238);
-    }
-    hr {
-        margin: 10px 0;
-    }
-    .second_section{
-        margin: 0 80px;
     }
     .pages_social {
         font-size: 27px;
         margin-top: 20px;
         text-align: end;
     }
-    .pages_social a i{
+    .pages_social a i {
         color: rgb(238, 238, 238);
     }
-    .tienda{
+    hr {
+        margin: 10px 0;
+    }
+    .second_section {
+        margin: 0 80px;
+    }
+    .tienda {
         display: flex;
         justify-content: space-between;
     }
-    .tienda p{
+    .tienda p {
         color: rgb(238, 238, 238);
         font-family: "Times New Roman", Times, serif;
     }
-    .desarrollador{
+    .desarrollador {
         text-align: center;
         margin: 20px 0;
     }
-    .desarrollador p{
+    .desarrollador p {
         color: rgb(238, 238, 238);
         font-family: "Times New Roman", Times, serif;
     }
-    
+
+   /* Estilos para pantallas pequeñas (tabletas en modo retrato) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .list-pages ul{
+            font-size: 12px;
+        }
+        .pages_social{
+           font-size: 15px;
+        }
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 767px) {
+        .first_section{
+            flex-direction: column;
+            align-items: center;
+        }
+        .list-pages ul{
+            font-size: 10px;
+        }
+        .pages_social{
+           font-size: 18px;
+        }
+        .second_section{
+            align-items: center;
+            margin: 0 5px;
+        }
+        .tienda p{
+            font-size: 8px;
+        }
+        .desarrollador p{
+            font-size: 12px;
+        }
+        .descripcion_perfil{
+            width: 300px;
+        }
+    }
 </style>

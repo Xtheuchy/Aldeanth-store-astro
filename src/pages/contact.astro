@@ -1,0 +1,89 @@
+---
+import CardContact from "../components/CardContact.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contactanos">
+    <main>
+        <section class="portada_contact">
+            <div class="contact">
+                <h1>
+                    <i class="fa-solid fa-comment"></i>
+                    <br />
+                    <i class="fa-solid fa-envelope"></i> Contactanos
+                </h1>
+                <p>
+                    <strong>
+                        ¡Conéctate con nosotros! ¿Tienes alguna pregunta,
+                        sugerencia o simplemente quieres saludarnos? Estamos
+                        aquí para escucharte. Completa el formulario o utiliza
+                        las opciones disponibles para ponerte en contacto con
+                        nosotros. ¡Esperamos saber de ti pronto!
+                        <br />
+                        <i class="fa-solid fa-users"></i>
+                    </strong>
+                </p>
+            </div>
+        </section>
+        <section class="op-Contact">
+            <CardContact
+            icon="fa-solid fa-location-dot"
+            name="Encuéntranos"
+            op1="Calle Los Olivos 123, Miraflores"
+            op2="Av. Sol Naciente 456, surco"
+            />
+            <CardContact
+            icon="fa-solid fa-message"
+            name="Escribenos"
+            op1="contacto.example@gmail.com"
+            op2="soporte.webpage@gmail.com"
+            />
+            <CardContact
+            icon="fa-solid fa-phone"
+            name="Llamanos"
+            op1="+51 987 654 321"
+            op2="+51 945 123 678"
+            />
+        </section>
+    </main>
+</Layout>
+<style>
+    .portada_contact {
+        width: 100%;
+        height: 700px;
+        background-image: url(https://cdn.pixabay.com/photo/2021/06/17/04/31/finger-6342630_640.jpg);
+        background-size: cover;
+        background-color: rgb(255, 227, 116);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    i {
+        color: rgb(235, 235, 235);
+    }
+    .contact {
+        width: 50%;
+        height: auto;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.41);
+        border-radius: 30px;
+        padding: 10px;
+    }
+    .contact h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+        color: rgb(235, 235, 235);
+    }
+    .contact p {
+        font-size: 18px;
+    }
+    .contact p strong {
+        color: rgb(235, 235, 235);
+    }
+    .op-Contact{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+</style>

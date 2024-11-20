@@ -1,27 +1,32 @@
 ---
-const{image,user,comentario} = Astro.props
+const { image, user, comentario } = Astro.props;
 ---
 
 <section>
     <div class="container-test">
         <div class="perfil">
-            <img
-                src={image}
-                alt="Perfil"
-            />
+            <img src={image} alt="Perfil" />
         </div>
         <div class="calificacion">
             <br />
             <br />
             <br />
-            <h3><i class="fa-solid fa-star" style="color: yellow;"></i><i class="fa-solid fa-star" style="color: yellow;"></i><i class="fa-solid fa-star" style="color: yellow;"></i><i class="fa-solid fa-star" style="color: yellow;"></i><i class="fa-solid fa-star"></i> </h3>
+            <h3>
+                <i class="fa-solid fa-star" style="color: yellow;"></i><i
+                    class="fa-solid fa-star"
+                    style="color: yellow;"></i><i
+                    class="fa-solid fa-star"
+                    style="color: yellow;"></i><i
+                    class="fa-solid fa-star"
+                    style="color: yellow;"></i><i class="fa-solid fa-star"></i>
+            </h3>
         </div>
         <div class="usuario">
             <h2>{user}</h2>
         </div>
         <div class="comentario">
             <p>
-            {comentario}
+                {comentario}
             </p>
         </div>
     </div>
@@ -66,14 +71,51 @@ const{image,user,comentario} = Astro.props
         position: relative;
         z-index: 2;
     }
-    .comentario{
+    .comentario {
         padding: 0 20px;
         text-align: justify;
-        font-family:'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
         font-size: 16px;
         color: rgb(221, 221, 221);
     }
-    .container-test:hover{
+    .container-test:hover {
         background-color: rgba(101, 101, 255, 0.863);
+    }
+    /* Estilos para pantallas pequeñas (tabletas en modo retrato) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        section {
+            width: 250px;
+            height: 220px;
+        }
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 767px) {
+        section {
+            width: 100px;
+            height: 220px;
+        }
+        .container-test {
+            width: 100%;
+            height: 220px;
+        }
+        .perfil {
+            width: 70px;
+            height: 70px;
+        }
+        .perfil img {
+            width: 70px;
+            height: 70px;
+        }
+        .calificacion {
+            font-size: 10px;
+        }
+        .usuario {
+            font-size: 9px;
+        }
+        .comentario {
+            font-size: 10px;
+            padding: 0 10px;
+        }
     }
 </style>

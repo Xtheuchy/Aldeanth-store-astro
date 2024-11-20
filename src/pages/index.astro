@@ -34,20 +34,20 @@ import Layout from "../layouts/Layout.astro";
 			<h1><i class="fa-solid fa-message"></i> Opiniones que Endulzan</h1>
 			<div class="content_test">
 				<CardTestimonio
-				image="https://cdn.pixabay.com/photo/2014/04/12/14/59/portrait-322470_640.jpg"
-				user="Carlos Gómez"
-				comentario="El helado tiene un toque único que no encuentras en ningún otro lado. Los sabores son auténticos, y el ambiente del lugar es súper acogedor. ¡100% recomendado!"
-			/>
-			<CardTestimonio
-				image="https://cdn.pixabay.com/photo/2015/03/03/08/55/portrait-657116_640.jpg"
-				user="Mariana Torres"
-				comentario="Me encanta lo natural que saben los helados aquí. Puedes sentir la frescura en cada cucharada. Además, el personal siempre es muy amable."
-			/>
-			<CardTestimonio
-				image="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_640.png"
-				user="Andrés Fernández"
-				comentario="Los helados son deliciosos y tienen opciones para todos los gustos. ¡Mi favorito es el de maracuyá! Definitivamente es mi lugar favorito para disfrutar un buen postre."
-			/>
+					image="https://cdn.pixabay.com/photo/2014/04/12/14/59/portrait-322470_640.jpg"
+					user="Carlos Gómez"
+					comentario="El helado tiene un toque único que no encuentras en ningún otro lado. Los sabores son auténticos, y el ambiente del lugar es súper acogedor. ¡100% recomendado!"
+				/>
+				<CardTestimonio
+					image="https://cdn.pixabay.com/photo/2015/03/03/08/55/portrait-657116_640.jpg"
+					user="Mariana Torres"
+					comentario="Me encanta lo natural que saben los helados aquí. Puedes sentir la frescura en cada cucharada. Además, el personal siempre es muy amable."
+				/>
+				<CardTestimonio
+					image="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_640.png"
+					user="Andrés Fernández"
+					comentario="Los helados son deliciosos y tienen opciones para todos los gustos. ¡Mi favorito es el de maracuyá! Definitivamente es mi lugar favorito para disfrutar un buen postre."
+				/>
 			</div>
 		</section>
 	</main>
@@ -82,7 +82,7 @@ import Layout from "../layouts/Layout.astro";
 	.button {
 		margin-top: 40px;
 		width: 40%;
-		height: auto;
+		height: 50px;
 		display: flex;
 		justify-content: center;
 	}
@@ -118,18 +118,62 @@ import Layout from "../layouts/Layout.astro";
 		gap: 18px;
 	}
 	.test_cliente {
-		margin: 10px 0 0 0;
+		margin-top: 50px;
 		padding: 15px 0;
 		background-color: rgb(247, 247, 247);
 	}
-	.test_cliente h1{
+	.test_cliente h1 {
 		text-align: center;
 		margin: 20px 0;
 		font-size: 30px;
 	}
-	.content_test{
+	.content_test {
 		display: flex;
 		justify-content: center;
 		gap: 20px;
+	}
+
+	/* Estilos para pantallas pequeñas (tabletas en modo retrato) */
+	@media (min-width: 768px) and (max-width: 991px) {
+		.mensaje {
+			width: 90%;
+			height: 160px;
+			justify-content: start;
+		}
+		.mensaje p {
+			font-size: 25px;
+		}
+		.button {
+			margin-top: 0;
+		}
+	}
+
+	/* Estilos para dispositivos móviles */
+	@media (max-width: 767px) {
+		.mensaje {
+			width: 90%;
+			height: 160px;
+			justify-content: start;
+		}
+		.mensaje h1 {
+			font-size: 30px;
+		}
+		.mensaje p {
+			text-align: center;
+			font-size: 16px;
+		}
+		.button {
+			margin-top: 0;
+		}
+		.button a button {
+			width: 100px;
+			height: 40px;
+			padding: 0 20px;
+			font-size: 10px;
+			margin-left: 55px;
+		}
+		.content_test{
+			gap: 10px;
+		}
 	}
 </style>

@@ -1,0 +1,263 @@
+---
+
+---
+
+<section>
+    <div class="containerCard-left">
+        <h1>Misión</h1>
+        <div class="image-text">
+            <img
+                src="https://cdn.pixabay.com/photo/2015/10/20/22/05/italy-998551_640.jpg"
+                alt="Mision"
+            />
+            <div class="text">
+                <h2>La Esencia de Nuestro Sabor:</h2>
+                <p>
+                    En nuestra heladería, nos apasiona crear momentos
+                    inolvidables llenos de sabor, frescura y alegría. Nos
+                    comprometemos a elaborar helados artesanales con los mejores
+                    ingredientes naturales, cuidando cada detalle para
+                    garantizar calidad y autenticidad en cada cucharada. Nuestro
+                    objetivo es ofrecer una experiencia única para nuestros
+                    clientes, combinando creatividad, innovación y tradición en
+                    nuestras recetas. Además, nos esforzamos por ser un espacio
+                    que fomente la conexión y el disfrute en familia o con
+                    amigos, mientras promovemos prácticas sostenibles que
+                    respeten el medio ambiente. Queremos ser reconocidos no solo
+                    por el sabor de nuestros productos, sino también por nuestro
+                    compromiso con la comunidad y el bienestar de todos los que
+                    nos rodean. ¡Porque cada helado cuenta una historia y cada
+                    cliente es parte de la nuestra!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="containerCard-right">
+        <h1>Visión</h1>
+        <div class="text-image">
+            <div class="text">
+                <h2>Nuestro Sueño Helado:</h2>
+                <p>
+                    Ser la heladería líder en la creación de experiencias dulces
+                    y memorables, reconocida por la excelencia en nuestros
+                    productos, la innovación en sabores y nuestro compromiso con
+                    la calidad y la sostenibilidad. Aspiramos a expandirnos como
+                    una marca que inspire felicidad, confianza y conexión,
+                    creando un impacto positivo en nuestras comunidades y en el
+                    cuidado del medio ambiente. Queremos convertirnos en un
+                    referente de helados artesanales, destacándonos por mantener
+                    la autenticidad de nuestras recetas mientras abrazamos
+                    nuevas tendencias y tecnologías para satisfacer las
+                    expectativas de nuestros clientes. ¡Soñamos con llevar
+                    nuestros sabores a cada rincón y seguir endulzando el mundo,
+                    una sonrisa a la vez!
+                </p>
+            </div>
+            <img
+                src="https://cdn.pixabay.com/photo/2019/12/11/20/08/coffee-4689200_640.jpg"
+                alt=""
+            />
+        </div>
+    </div>
+</section>
+<style>
+    .containerCard-left {
+        width: 100%;
+        text-align: center;
+    }
+    .containerCard-left h1 {
+        font-size: 48px;
+    }
+    .image-text {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .image-text img {
+        border-radius: 10px;
+    }
+    .text {
+        text-align: justify;
+        width: 40%;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+    }
+    .text h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .text p {
+        font-size: 17px;
+    }
+    .containerCard-right {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .containerCard-right h1 {
+        font-size: 48px;
+    }
+    .text-image {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .text-image img {
+        border-radius: 10px;
+    }
+    /* Estilos para pantallas medianas (tabletas y escritorios pequeños) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        
+    }
+
+    /* Estilos para pantallas pequeñas (tabletas en modo retrato) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .containerCard-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-text{
+            position: relative;
+            width: 90%;
+            height: 501.013px;
+        }
+        .image-text img{
+            position: absolute;
+            width: 100%;
+            height: 501.013px;
+        }
+        .image-text .text{
+            position: absolute;
+            width: 80%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.49);
+            bottom: 0;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+        }
+        .image-text:hover .text{
+            display: block;
+        }
+        h2 , p{
+            color: rgb(235, 235, 235);
+        }
+        .containerCard-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-image{
+            position: relative;
+            width: 90%;
+            height: 501.013px;
+        }
+        .text-image img{
+            position: absolute;
+            width: 100%;
+            height: 501.013px;
+        }
+        .text-image .text{
+            position: absolute;
+            width: 80%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.49);
+            bottom: 0;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1;
+        }
+        .text-image:hover .text{
+            display: block;
+        }
+    }
+
+    
+    @media (max-width: 767px) {/* Estilos para dispositivos móviles */
+        .containerCard-left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-text{
+            position: relative;
+            width: 90%;
+            height: 300px;
+        }
+        .image-text img{
+            position: absolute;
+            width: 100%;
+            height:300px;
+        }
+        .image-text .text{
+            position: absolute;
+            width: auto;
+            height: 93.1%;
+            left: 0;
+            background-color: rgb(6, 0, 116);
+            bottom: 0;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+        }
+        .image-text:hover .text{
+            display: block;
+        }
+        .image-text .text h2{
+            font-size: 20px;
+            color: rgb(219, 216, 216);
+        }
+        .image-text .text p{
+            color: rgb(219, 216, 216);
+            font-size: 12px;
+            text-align: left;
+        }
+        .containerCard-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-image{
+            position: relative;
+            width: 90%;
+            height: 300px;
+        }
+        .text-image img{
+            position: absolute;
+            width: 100%;
+            height: 300px;
+        }
+        .text-image .text{
+            position: absolute;
+            width: auto;
+            height: 93.1%;
+            left: 0;
+            background-color: rgb(6, 0, 116);
+            bottom: 0;
+            padding: 10px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1;
+        }
+        .text-image:hover .text{
+            display: block;
+        }
+        .text-image .text h2{
+            font-size: 20px;
+            color: rgb(219, 216, 216);
+        }
+        .text-image .text p{
+            color: rgb(219, 216, 216);
+            font-size: 13px;
+            text-align: left;
+        }
+    }
+</style>
