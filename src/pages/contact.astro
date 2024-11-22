@@ -27,23 +27,62 @@ import Layout from "../layouts/Layout.astro";
         </section>
         <section class="op-Contact">
             <CardContact
-            icon="fa-solid fa-location-dot"
-            name="Encuéntranos"
-            op1="Calle Los Olivos 123, Miraflores"
-            op2="Av. Sol Naciente 456, surco"
+                icon="fa-solid fa-location-dot"
+                name="Encuéntranos"
+                op1="Calle Los Olivos 123, Miraflores"
+                op2="Av. Sol Naciente 456, surco"
             />
             <CardContact
-            icon="fa-solid fa-message"
-            name="Escribenos"
-            op1="contacto.example@gmail.com"
-            op2="soporte.webpage@gmail.com"
+                icon="fa-solid fa-message"
+                name="Escribenos"
+                op1="contacto.example@gmail.com"
+                op2="soporte.webpage@gmail.com"
             />
             <CardContact
-            icon="fa-solid fa-phone"
-            name="Llamanos"
-            op1="+51 987 654 321"
-            op2="+51 945 123 678"
+                icon="fa-solid fa-phone"
+                name="Llamanos"
+                op1="+51 987 654 321"
+                op2="+51 945 123 678"
             />
+        </section>
+        <section class="formulario">
+            <form>
+                <div class="name-email">
+                    <div class="name">
+                        <label for="name">Nombre</label><br />
+                        <input type="text" placeholder="Nombre" required />
+                    </div>
+                    <div class="email">
+                        <label for="email">Correo</label><br />
+                        <input type="email" placeholder="Correo" required />
+                    </div>
+                </div>
+                <div class="phone-service">
+                    <div class="phone">
+                        <label for="phone">Telefono</label><br />
+                        <input type="tel" placeholder="Telefono" required />
+                    </div>
+                    <div class="service">
+                        <label for="servicio">Opciones: </label>
+                        <br />
+                        <select id="opciones" name="opciones" required>
+                            <option value="1">Entrega a domicilio</option>
+                            <option value="2">Recoger en tienda</option>
+                            <option value="3">Eventos especiales</option>
+                            <option value="4">Catering para fiestas</option>
+                            <option value="5">Helados personalizados</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mensaje">
+                    <label for="mensaje">Mensaje: </label><br />
+                    <textarea
+                        name="mensaje"
+                        placeholder="Ingrese su mensaje"
+                        required></textarea>
+                </div>
+                <input class="envio" type="submit" />
+            </form>
         </section>
     </main>
 </Layout>
@@ -80,10 +119,117 @@ import Layout from "../layouts/Layout.astro";
     .contact p strong {
         color: rgb(235, 235, 235);
     }
-    .op-Contact{
+    .op-Contact {
         margin-top: 10px;
         display: flex;
         justify-content: center;
         gap: 10px;
+    }
+    /* General Styles */
+    .formulario {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        padding: 30px;
+        width: 75%;
+        background-color: rgba(119, 180, 255, 0.473);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 10px;
+    }
+
+    /* Secciones agrupadas */
+    .name-email,
+    .phone-service {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .name,
+    .email,
+    .phone,
+    .service {
+        width: 48%; /* Ajusta el tamaño en filas */
+    }
+
+    .mensaje {
+        width: 100%;
+    }
+
+    .mensaje textarea {
+        padding: 10px;
+        width: 100%;
+        height: 150px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    select {
+        width: 93.6%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .envio {
+        width: 30%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .envio:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsividad */
+    @media screen and (max-width: 768px) {
+        .name-email,
+        .phone-service {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .name,
+        .email,
+        .phone,
+        .service {
+            width: 100%; /* Toman todo el ancho disponible */
+        }
+
+        .envio {
+            width: 50%; /* Botón más grande en pantallas pequeñas */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        form {
+            width: 90%; /* Más compacto en dispositivos pequeños */
+        }
+
+        .envio {
+            width: 70%;
+        }
     }
 </style>
